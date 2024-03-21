@@ -31,7 +31,7 @@ function sierra.computePacket(l, f, h, m)
     if not isValid then
         return "SIGNATURE_CHECK_FAIL"
     end
-    if os.time() + 0.03 < n.time then
+    if os.time() < n.time + 0.03 then
         return "TIME_CHECK_FAIL"
     end
     local o = true
